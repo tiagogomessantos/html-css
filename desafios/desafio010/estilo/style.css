@@ -54,7 +54,7 @@ header > P{font-family: var(--fonte-padrao);
     font-size: 1.2em;
     color: white;
     width: 450px;
-    text-align: center;
+    margin: auto;
     margin-bottom: 9px;
 
 }
@@ -143,7 +143,7 @@ div.video{
     background-color: var(--cor0);
     margin: 0px -20px 30px -20px;
     padding: 20px;
-    padding-bottom: 58%;
+    padding-bottom: 57%;
     position: relative;
 }
 div.video > iframe{
