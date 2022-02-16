@@ -19,12 +19,21 @@
             margin: auto;
             width: 500PX;
             border-collapse: collapse;
+            position: relative;
         }
         td,th{border: 1px solid black;
         padding: 10px;}
         thead,tfoot{
             background-color: black;
             color: white;
+        }
+        thead > tr > th{
+            position: sticky;
+            top: -1px;
+            background-color: black;
+        }
+        tbody > tr:nth-last-child(2n) {
+            background-color: beige;
         }
         td.num{
             text-align: right;
