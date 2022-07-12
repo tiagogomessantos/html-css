@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inscriçao</title>
+    <style>
+        body{background-color: #2F6132;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+           
+    header{font-size: 1.2em;
+    margin-bottom: 9px;
+}
+header > img {
+   margin-right: 1820px;
+}
+ header p {
+     font-size: 0.9em;
+     margin:-49px 0px 20px -1590px;
+    }
+ nav{margin-top: -48px;
+    margin-bottom: 50px;
+    text-align: right;
+
+}
+ nav > a{
+     font-size: 0.7em;
+     text-decoration: none;
+    font-weight: lighter;
+     color: white;
+     background-color: #56B35C;
+     padding: 5px;
+     border-radius: 5px;
+ }
+ nav > a:hover{
+     background-color: white;
+     color: var(--cor1);
+ }
+ nav h1{
+     text-align: center;
+ }
+        header{
+            text-align: center;
+        }
+        main{text-align: center;
+            box-shadow: 3px 2px 11px 0px rgba(0, 0, 0, 0.404);
+            border-radius: 5px;
+            background-color: white;
+            width: 700px;
+            height: 700px;
+            margin: auto;
+            font-weight: bolder;
+            padding: 10px;
+        }
+        .info{
+            width: 350px;
+            height: 25px;
+            margin-left: 10px;
+            text-transform: capitalize;
+        }
+        .email{
+            width: 350px;
+            height: 25px;
+            margin-left: 10px;
+        }
+        .numero{
+            width: 350px;
+            height: 25px;
+            margin-left: 30px;
+
+        }
+        main.textarea{
+            text-transform: uppercase;
+        }
+
+        
+         
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="foto/logo imub.png"alt="logo imub"> <p>IMUB Missões</p>
+        <nav>
+            <a href="missoes.html">Pagina inicial</a>
+            <a href="Historia.html">História</a>
+            <a href="inscriçao.html">inscriçao</a>
+        </nav>
+   
+    </header>
+    <main><form action="cadastro.js" autocomplete="off">
+        
+            <h1>INSCRIÇÃO DO PROJETO</h1>
+            <p> <label for="name">NOME :</label> <input class="info" type="text" name="name" id="name"></P>
+            <p><label for="idade"> IDADE :</label> <input class="info" type="number" name="idade" id="idade"> </p>
+            <p><label for="email"> EMAIL : </label><input class="email" type="email" name="email" id="email"></p>
+            <p><label for="telefone"> TEL :</label> <input class="numero" type="tel" name="telefone" id="telefone"></p>
+               <!--usar label para interagir com o formulario e muito importante--> 
+        
+            <P> <label for="sexo1">SEXO :</label>
+                <input type="radio" name="x" id="sexo1" checked>
+                <label for="MAS">MASCULINO</label>
+                <input type="radio" name="x" id="sexo2">
+                <label for="FEM">FEMININA</label>
+            </P>
+            <div>
+                <p>fale sobre suas habilidades dentro da <strong>Igreja</strong> </p>
+                <textarea name="exp" id="exp" cols="40" rows="10"></textarea>
+            <div>
+            <input type="submit" value="enviar" onclick="enviar()">
+    </form>
+
+        <div id="resultado"></div>
+
+
+    </main>
+    <script>
+      function enviar (){
+        var n = window.document.getElementById('name')
+        var i = window.document.getElementById('idade')
+        var e = window.document.getElementById('email')
+        var numero = window.document.getElementById('telefone')
+        var r = window.document.getElementById('resultado')
+        var n1 = (n.value)
+        var i1 = Number(i.value)
+        var numero = Number(numero.value)
+        var e1 = (e.value)
+        r.innerHTML = `Sua inscriçao esta em revisão entraremos em contato com vc`
+        r.style.fontWeight = '100'
+        r.style.color = 'green'
+
+        if ( n1 == 0 || i1 == 0 || e1 == 0 || numero == 0 ){
+            r.innerText = (' Preenchar todos os requisitos')
+            r.style.color = 'red'
+            r.style.fontWeight = '100'
+        }else if (i1 < 10){
+            r.innerHTML = 'vc precisa no minimo de 15 anos, ou ir acompanhado pelos seus pais'
+        }
+
+      }
+    </script>
+    
+</body>
+</html>

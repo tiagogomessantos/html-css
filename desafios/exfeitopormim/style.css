@@ -15,7 +15,7 @@ body{background-color: var(--cor1);
 header{font-size: 1.2em;
     margin-bottom: 9px;
 }
-header > img {
+header  img {
     margin-left: 20px;
 }
  header p {
@@ -108,7 +108,7 @@ div.video > iframe{
      color: black;
  }
  footer a{
-     color: var(--cor4);
+     color:white;
      text-decoration: none;
      border-radius: 5px;
      padding: 5px;
